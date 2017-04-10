@@ -1,97 +1,22 @@
--- IDs --
-subject - The ID of the test subject
-activity - The type of activity performed when the corresponding measurements were taken
+Assignment for Coursera course Getting and Cleaning Data
 
+This is the readme documentent of the project assignment for Coursera Getting and Cleaning Data.
 
+The repository contains in the following files the "tidy" data set, R code used to create it, and codebooks in markdown.
 
--- Measurements --
+description of files : README.md
+Codebook: CodeBook.md
+Tidy data set: tidy_dataset.txt
+R code to generate data: run_analysis.R
+Details on R code to generate data
 
-tBodyAccMeanX
-tBodyAccMeanY
-tBodyAccMeanZ
-tBodyAccStdX
-tBodyAccStdY
-tBodyAccStdZ
-tGravityAccMeanX
-tGravityAccMeanY
-tGravityAccMeanZ
-tGravityAccStdX
-tGravityAccStdY
-tGravityAccStdZ
-tBodyAccJerkMeanX
-tBodyAccJerkMeanY
-tBodyAccJerkMeanZ
-tBodyAccJerkStdX
-tBodyAccJerkStdY
-tBodyAccJerkStdZ
-tBodyGyroMeanX
-tBodyGyroMeanY
-tBodyGyroMeanZ
-tBodyGyroStdX
-tBodyGyroStdY
-tBodyGyroStdZ
-tBodyGyroJerkMeanX
-tBodyGyroJerkMeanY
-tBodyGyroJerkMeanZ
-tBodyGyroJerkStdX
-tBodyGyroJerkStdY
-tBodyGyroJerkStdZ
-tBodyAccMagMean
-tBodyAccMagStd
-tGravityAccMagMean
-tGravityAccMagStd
-tBodyAccJerkMagMean
-tBodyAccJerkMagStd
-tBodyGyroMagMean
-tBodyGyroMagStd
-tBodyGyroJerkMagMean
-tBodyGyroJerkMagStd
-fBodyAccMeanX
-fBodyAccMeanY
-fBodyAccMeanZ
-fBodyAccStdX
-fBodyAccStdY
-fBodyAccStdZ
-fBodyAccMeanFreqX
-fBodyAccMeanFreqY
-fBodyAccMeanFreqZ
-fBodyAccJerkMeanX
-fBodyAccJerkMeanY
-fBodyAccJerkMeanZ
-fBodyAccJerkStdX
-fBodyAccJerkStdY
-fBodyAccJerkStdZ
-fBodyAccJerkMeanFreqX
-fBodyAccJerkMeanFreqY
-fBodyAccJerkMeanFreqZ
-fBodyGyroMeanX
-fBodyGyroMeanY
-fBodyGyroMeanZ
-fBodyGyroStdX
-fBodyGyroStdY
-fBodyGyroStdZ
-fBodyGyroMeanFreqX
-fBodyGyroMeanFreqY
-fBodyGyroMeanFreqZ
-fBodyAccMagMean
-fBodyAccMagStd
-fBodyAccMagMeanFreq
-fBodyBodyAccJerkMagMean
-fBodyBodyAccJerkMagStd
-fBodyBodyAccJerkMagMeanFreq
-fBodyBodyGyroMagMean
-fBodyBodyGyroMagStd
-fBodyBodyGyroMagMeanFreq
-fBodyBodyGyroJerkMagMean
-fBodyBodyGyroJerkMagStd
-fBodyBodyGyroJerkMagMeanFreq
+The R code creates the mean values of the original source data for each subject and activity.
 
+In particular for the creation of this data set the following transformations have been applied:
 
--- Activity Labels -- 
-
-WALKING (value 1): subject was walking during the test
-WALKING_UPSTAIRS (value 2): subject was walking up a staircase during the test
-WALKING_DOWNSTAIRS (value 3): subject was walking down a staircase during the test
-SITTING (value 4): subject was sitting during the test
-STANDING (value 5): subject was standing during the test
-LAYING (value 6): subject was laying down during the test
+Training and Test sets have been merged into one data set
+Only the measurements on the mean and standard deviation for each measurement have been isolated.
+Numeric activity names in the data set have been replaced by their corresponding textual representation
+The dataset has been amended with with descriptive variable names
+For each Activity and Subject a mean values has been calculated. For each original column xxx_std() or xxx_mean() a corresponding variable Mean_xxx_std() and Mean_xxx_mean() have been included in the current dataset.
+For further details on the source data follow the references in the Codebook.md For further details on the applied transformations please check out the comments in run_analysis.R

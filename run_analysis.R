@@ -5,7 +5,7 @@ library(reshape2)
 
 filename <- "getdata_dataset.zip"
 
-# get the dataset and unzip it
+# get the dataset and unzip it 
 if (!file.exists(filename)){
   fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip "
   download.file(fileURL, filename, method="curl")
